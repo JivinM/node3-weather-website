@@ -8,20 +8,25 @@ const hbs = require('hbs');
 const publicDirectory = path.join(__dirname, '../public');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forcast');
+const viewsPath = path.join(__dirname, '../src/views')
 
 //
 // The App Variable
 //
 
-const app = express()
+const app = express();
+const port = process.env.PORT || 3000;
 
 //
 // The App
 //
 
+
 app.set('view engine', 'hbs');
+app.set('views', viewsPath)
 hbs.registerPartials(path.join(__dirname, '../src/views/partials'))
 app.use(express.static(publicDirectory))
+
 
 app.get('', (req, res) => {
     res.render('index', {
@@ -108,6 +113,6 @@ app.get('*', (req, res) => {
 // Start the app on 'localhost:3000'
 //
 
-app.listen(3000, () => {
-    console.log('The server has served you.')
+app.listen(port, () => {
+    console.log('The server has served you. On port ' + port);
 });
