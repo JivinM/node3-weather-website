@@ -26,6 +26,11 @@ header {
     margin-bottom: 48px;
 }
 
+a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
 h1 {
     color: #ffa500;
     font-size: 64px;
@@ -60,7 +65,7 @@ button {
 }
 
 button:hover {
-    box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .img-text {
