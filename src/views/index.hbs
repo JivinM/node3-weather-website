@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Weather app - Home</title>
+<link rel="icon" href="/images/weather.png">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="main-content">
+{{>header}}
+<p>Use this site to get your weather.</p>
+
+<hr>
+
+<form>
+    <input placeholder="Location">
+    <button>Search</button>
+</form>
+
+<hr>
+
+<p id="message" class="message"></p>
+<p id="message-1">Not your location? Example:</p>
+<p id="message-2">East Brunswick, New Jersey</p>
+
+</div>
+
+{{>footer}}
+
+<script src="/js/app.js"></script>
+</body>
+</html>
