@@ -9,7 +9,7 @@ const forcast = (lat, long, callback) => {
         } else if (body.error) {
             callback('Unable to find location. Try another search', undefined);
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degrees outside. It feels like ' + body.current.feelslike + ' degrees outside. The humidity is ' + body.current.humidity + '%. UV index is ' + body.current.uv_index + '. The Wind Speed is ' + body.current.wind_speed + ' and the wind direction is ' + body.current.wind_dir + '.');
+            callback(undefined, body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degrees outside. It feels like ' + body.current.feelslike + ' degrees outside. The humidity is ' + body.current.humidity + '%. UV index is ' + body.current.uv_index + '. The Wind Speed is ' + body.current.wind_speed + 'mph and the wind direction is ' + body.current.wind_dir + '.');
         }
     })
 }
