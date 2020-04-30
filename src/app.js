@@ -39,6 +39,10 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help Page',
         message: 'Weather app by Jivin Mazumder. Created with Node.js. Not owned by Node.js.',
+        example: 'East Brunswick, New Jersey',
+        ex1: 'type in a ZIP code',
+        ex2: 'type a lone place',
+        ex3: 'not type a lone place. Example: East Brunswick, New Jersey',
         name: 'Jivin Mazumder'
     })
 })
